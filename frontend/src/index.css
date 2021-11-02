@@ -1,16 +1,32 @@
-main {
-  min-height: 90vh;
-  background: #006437;
-  background: -moz-linear-gradient(45deg, #006437 0%, #006437 0%, #ffffff 100%);
-  background: -webkit-linear-gradient(
-    45deg,
-    #006437 0%,
-    #006437 0%,
-    #ffffff 100%
-  );
-  background: linear-gradient(45deg, #006437 0%, #006437 0%, #ffffff 100%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-navbar {
-  background-color: #006437;
+h1 {
+  text-align: center;
+  color: #006437;
+}
+
+main {
+  min-height: 80vh;
+}
+.navbar {
+  background-image: linear-gradient(to right, #006437, #fff);
+}
+.navbar-light .navbar-brand {
+  color: #fff;
+}
+.navbar-light .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #006437;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #006437;
+  font-weight: 700;
+  text-decoration: underline;
 }
