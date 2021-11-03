@@ -1,5 +1,6 @@
 import React from 'react'
 import { Nav, Navbar, Container } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../palmeiras.png'
 
 const Header = () => {
@@ -7,21 +8,31 @@ const Header = () => {
         <header>
             <Navbar collapseOnSelect expand="lg" className="navbar">
                 <Container>
-                <Navbar.Brand href="/"><img
+                <LinkContainer to='/'>    
+                    <Navbar.Brand><img
                     src={Logo}
                     width="30"
                     height="30"
                     className="d-inline-block align-top"
                     alt=""
                     />   Palmeiras Londres</Navbar.Brand>
+                </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto"></Nav>
                             <Nav>
-                                <Nav.Link className="nav-link" href="/jogos">Jogos</Nav.Link>
-                                <Nav.Link className="nav-link" href="/eventos">Eventos</Nav.Link>
-                                <Nav.Link className="nav-link" href="/contato">Contato</Nav.Link>
-                                <Nav.Link className="nav-link" href="/login">Login</Nav.Link>
+                            <LinkContainer to='/jogos'>
+                                <Nav.Link className="nav-link">Jogos</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to='/eventos'>
+                                <Nav.Link className="nav-link">Eventos</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to='/contato'>
+                                <Nav.Link className="nav-link">Contato</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to='/login'>
+                                <Nav.Link className="nav-link">Login</Nav.Link>
+                            </LinkContainer>
                             </Nav>
                     </Navbar.Collapse>
                 </Container>
